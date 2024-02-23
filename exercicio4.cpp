@@ -17,7 +17,7 @@ int main(){
     }while(z <= b);
     
     for(j = a;j < b; j++){
-        for(i = b; i > a; i--){
+        for(i = j + 1; i <= b; i++){
             if(i + j == z){
                  cout << j << " + " << i << " = " << z << endl;
             }
