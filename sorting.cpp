@@ -33,20 +33,22 @@ void insertion(int vetor[], int num){
     }
 }
 
-void selection(int vetor[], int num){
-
+void selection(int vetor[], int num) {
     int aux, min, j, i;
 
-    for(j=0;j<num - 1;j++){
+    for(j = 0; j < num - 1; j++) {
         min = j;
-            for(i=j+1;i<num;i++){
-                if(vetor[min] > vetor[i]);
-                        min = i;
+        for(i = j + 1; i < num; i++) {
+            if(vetor[min] > vetor[i]) {
+                min = i;
             }
+        }
+        if (min != j) { 
+            aux = vetor[j];
+            vetor[j] = vetor[min];
+            vetor[min] = aux;
+        }
     }
-    aux = vetor[j];
-    vetor[j] = vetor[min];
-        vetor[min] = aux;
 }
 
 
